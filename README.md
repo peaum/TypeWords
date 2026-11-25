@@ -85,6 +85,14 @@ This project is built with `Nuxt` and requires a Node.js environment.
 5. Open [`http://localhost:5567`](http://localhost:5567) in your browser to access the project.
 6. Run `pnpm run generate` to build the project files.
 
+### Build a Windows installer
+
+With Node.js 22.12+ installed, enable pnpm with `corepack enable`, then run
+`pnpm install` and `pnpm desktop:msi`.
+The generated Windows MSI installer will be placed in the `release` directory.
+To launch the packaged desktop app without creating an installer, run
+`pnpm desktop:dir`.
+
 ## Features and Suggestions
 
 The project is currently in early development, with new features being added continuously. If you have any suggestions or feature requests, feel free to open an `Issue`.
@@ -107,4 +115,3 @@ Of course, sponsorship is not required for use—sharing the project, submitting
 
 <img width="300" height="390" alt="practice words" src="/public/imgs/zhifubao.png" />
 <img width="300" height="390" alt="practice words" src="/public/imgs/weixin.png" />
-

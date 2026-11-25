@@ -1,5 +1,7 @@
 {
   "name": "typewords",
+  "version": "1.0.1",
+  "author": "TypeWords",
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
@@ -7,6 +9,9 @@
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "desktop:generate": "cross-env TYPEWORDS_ELECTRON=1 nuxt generate",
+    "desktop:dir": "pnpm desktop:generate && node scripts/buildElectron.cjs --dir",
+    "desktop:msi": "pnpm desktop:generate && node scripts/buildElectron.cjs --win msi",
     "i18n:write": "gulp i18nWrite",
     "test": ""
   },
@@ -74,8 +79,11 @@
     "@vue/compiler-sfc": "^3.5.17",
     "ali-oss": "^6.23.0",
     "commitizen": "^4.3.1",
+    "cross-env": "^10.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "edgeone": "^1.2.27",
+    "electron": "^45.2.1",
+    "electron-builder": "^26.18.0",
     "esm": "^3.2.25",
     "git-last-commit": "^1.0.1",
     "gulp": "^5.0.1",

@@ -49,6 +49,7 @@ const appBaseURL = normalizeBaseURL(process.env.NUXT_APP_BASE_URL || '/')
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
+  ssr: process.env.TYPEWORDS_ELECTRON !== '1',
   devtools: { enabled: true },
   app: {
     baseURL: appBaseURL,
